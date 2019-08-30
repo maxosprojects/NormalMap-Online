@@ -1,6 +1,6 @@
 div.view {
-	//position: relative;
-	//background-color: #eee;
+	/* //position: relative; */
+	/* //background-color: #eee; */
 	border: 1px solid #ccc;
 	white-space: nowrap;
 	text-align: center;
@@ -9,6 +9,15 @@ div.view {
 	z-index: 1;
 	height: 300px;
     width: 300px;
+}
+
+#preview {
+	width: 838px;
+}
+
+#render_view {
+	width: 800px;
+	height: 800px;
 }
 
 div.drop_cell{

@@ -28,7 +28,7 @@ var NMO_RenderView = new function(){
 	this.renderer = new THREE.WebGLRenderer({ alpha: false,  antialias: true });
 	this.displacement_map, this.diffuse_map, this.normal_map, this.specular_map, this.ao_map;
 	this.material;
-	this.rotation_enabled = true;
+	this.rotation_enabled = false;
 	this.render_model;
 	this.customModel;
 	this.textureCube;
@@ -37,7 +37,8 @@ var NMO_RenderView = new function(){
 		// request new frame
         requestAnimationFrame(function(){
             NMO_RenderView.renderView();
-        });
+		});
+		this.renderer.setSize(800, 800);
 		this.renderer.render(this.scene, this.camera);
 		
 		if(this.rotation_enabled){
